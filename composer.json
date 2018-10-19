@@ -1,0 +1,34 @@
+{
+    "name": "rrr/schedule-list",
+    "description": "List your Laravel's scheduled tasks",
+    "autoload": {
+        "psr-4": {
+            "i8086\\ScheduleList\\": "src",
+            "i8086\\ScheduleList\\Test\\": "tests/"
+        }
+    },
+    "require": {
+        "laravel/framework": "^5.7"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.7",
+        "phpunit/phpunit": "^7.4",
+        "mockery/mockery": "^1.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "i8086\\ScheduleList\\ServiceProvider"
+            ],
+            "aliases": {
+                "ScheduleList": "i8086\\ScheduleList\\Facade"
+            }
+        }
+    },
+    "authors": [
+        {
+            "name": "Ricardo Ramirez R.",
+            "email": "ricardo.ramirez.r@gmail.com"
+        }
+    ]
+}
