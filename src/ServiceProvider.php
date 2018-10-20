@@ -4,6 +4,7 @@ namespace i8086\ScheduleList;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 use i8086\ScheduleList\Console\Commands\ScheduleList;
+use Illuminate\Console\Scheduling\Schedule;
 
 class ServiceProvider extends LaravelServiceProvider
 {
@@ -29,7 +30,8 @@ class ServiceProvider extends LaravelServiceProvider
     public function register()
     {
         $this->app->singleton(ScheduleList::class, function () {
-            return new ScheduleList();
+            $schedule = app()->make(Schedule::class);
+            return new ScheduleList($schedule);
         });
 
         $this->app->alias(ScheduleList::class, 'ScheduleList');
