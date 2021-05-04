@@ -3,11 +3,10 @@
 namespace i8086\ScheduleList\Test;
 
 use Carbon\Carbon;
-use ScheduleList;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Console\Scheduling\Schedule;
 
-class ScheduleListTest extends TestCase
+class SchedulerListTest extends TestCase
 {
     /** @var \Carbon\Carbon */
     protected $date;
